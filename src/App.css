@@ -1,38 +1,201 @@
-.App {
-  text-align: center;
+* {
+  font-family: "Inter", sans-serif;
+}
+.NavBar {
+  color: rgb(73, 71, 71) !important;
+  font-weight: bold;
+  background-color: whitesmoke !important;
+  padding: 0.3rem;
+}
+.innerNavbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Advocasehedding {
+  font-size: 1.6rem !important;
+  font-weight: bold !important;
+}
+.Advocasehedding span {
+  color: #025bd4;
+  font-size: 1.8rem;
+}
+.headIcons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.profileIcon {
+  font-size: 1.8rem !important;
+  margin-left: 1rem;
+}
+.gradient-button {
+  color: rgb(73, 71, 71);
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  border-radius: 1rem;
+  padding: 7px 10px;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gradient-button:hover {
+  background: linear-gradient(40deg, #025bd4, darkblue);
+  color: white;
+}
+.gradient-button-home {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  border-radius: 1rem;
+  padding: 7px 20px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(40deg, #025bd4, darkblue);
+}
+.gradient-button-next {
+  align-items: center;
+  border: none;
+  background: none;
+  border-radius: 1rem;
+  padding: 10px 25px;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  margin-left: 88%;
+  margin-top: 1rem;
+  background: linear-gradient(40deg, #025bd4, darkblue);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ////////////////////////////////// */
+
+.fileUploadPage {
+  background-color: #e2e7f5;
+  min-height: 92.3vh;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.fileuploadLeftPage {
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+  min-width: 20rem;
+  min-height: 88vh;
+  background-color: white;
+}
+.fileuploadRightPage {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  min-width: 43vw;
+  min-height: 88vh;
+  background-color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.study_div {
+  margin-top: 0.5rem;
+  border: 1px solid lightgrey;
+  min-height: 3rem;
+  border-radius: 0.8rem;
+  padding: 0.5rem;
+  height: 3.5rem;
+}
+.toastMessage {
+  margin-top: -1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.study_div_p {
+  margin-top: -0.1rem;
+  color: #025bd4;
+}
+.toastMessage-success {
+  padding: 0.2rem;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  color: green;
+  background-color: rgb(213, 248, 213);
+}
+.toastMessage-progress {
+  border-radius: 0.2rem;
+  font-size: 0.7rem;
+  padding: 0.2rem;
+
+  display: flex;
+  align-items: center;
+  color: orange;
+  background-color: rgb(238, 232, 204);
+}
+.toastMessage-error {
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 81, 0);
+  background-color: rgb(247, 205, 177);
+}
+.toastMessage div img {
+  height: 0.7rem;
+  margin-right: 0.5rem;
+}
+.rightPageHedding {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1rem;
+}
+.rightPageHedding span {
+  color: #025bd4;
+}
+.textArea {
+  padding: 0.6rem;
+  border: 1px solid lightgray;
+  min-width: 96%;
+  min-height: 12vh;
+  border-radius: 1rem;
+}
+
+.uploadFile {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-width: 96%;
+  background-color: rgb(243, 241, 241);
+  min-height: 32vh;
+  border: 1px solid rgba(192, 191, 191, 0.842);
+  border-style: dashed;
+  border-radius: 1rem;
 }
-
-.App-link {
-  color: #61dafb;
+.uploadFile p {
+  margin: 0.4rem;
+  font-size: 0.8rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fileTypes {
+  font-size: 0.8rem;
+  padding: 0;
+  margin: 0;
+}
+.fileUploadDiv {
+  margin-top: 0.5rem;
+  display: flex;
+  height: 1.5rem;
+  background-color: rgb(243, 241, 241);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.4rem;
+  justify-content: space-between;
+}
+.fileUploadDiv div {
+  display: flex;
+  align-items: center;
+}
+.fileUploadDiv img {
+  height: 1.5rem;
 }
