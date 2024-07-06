@@ -64,7 +64,7 @@
   cursor: pointer;
   color: white;
   font-size: 1rem;
-  margin-left: 78%;
+  margin-left: 73%;
   margin-top: 1rem;
   background: linear-gradient(40deg, #025bd4, darkblue);
   margin-bottom: 0.5rem;
@@ -282,7 +282,7 @@
   cursor: pointer;
   color: lightgray;
   padding: 0.5rem 0.5rem;
-  width: 10rem;
+  /* width: 10rem; */
 }
 .subBtn_qus {
   border: 1px solid lightgray;

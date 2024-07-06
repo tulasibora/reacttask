@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import mark from "../assets/mark.png";
 import check from "../assets/check (1).png";
 import clock from "../assets/clock.png";
@@ -8,11 +8,20 @@ import docx from "../assets/docx.png";
 import CloseIcon from "@mui/icons-material/Close";
 import save from "../assets/save.png";
 import { useNavigate } from "react-router-dom";
-export const FileuploadPage = () => {
+export const FileuploadPage = ({ filename, setFileName }) => {
   const navigate = useNavigate();
+
   const handleChange = () => {
     navigate("/questions");
   };
+
+  //////Delete the file from the Files Uploaded
+
+  const hadleDleteFile = (file) => {
+    const fileredFiles = filename.filter((ele) => ele.name !== file);
+    setFileName(fileredFiles);
+  };
+
   return (
     <div className="fileUploadPage">
       <div className="fileuploadLeftPage">
@@ -72,37 +81,33 @@ export const FileuploadPage = () => {
           placeholder="Ex: Land disputes,Mumbai,Recent judgements."
         />
         <div className="uploadFile">
-          <InputFileUpload />
+          <InputFileUpload filename={filename} setFileName={setFileName} />
           <p>Click here to Upload file</p>
           <p>Maximum uploads :1 </p>
           <p className="fileTypes">File Formate : JPG,PNG,docx,pdf etc.</p>
         </div>
         <div>
           <p>Uploaded files </p>
-          <div className="fileUploadDiv">
-            <div>
-              <img src={save} alt="" />
-              <p>case document.pdf</p>
-            </div>
 
-            <CloseIcon />
-          </div>
-          <div className="fileUploadDiv">
-            <div>
-              <img src={save} alt="" />
-              <p>case document.pdf</p>
-            </div>
-
-            <CloseIcon />
-          </div>
-          <div className="fileUploadDiv">
-            <div>
-              <img src={docx} alt="" />
-              <p>case document.pdf</p>
-            </div>
-
-            <CloseIcon />
-          </div>
+          {filename.length > 0
+            ? filename.map((filesUploaded, i) => {
+                return (
+                  <div className="fileUploadDiv" key={i}>
+                    <div>
+                      {filesUploaded.type === "application/pdf" ? (
+                        <img src={save} alt="" />
+                      ) : (
+                        <img src={docx} alt="" />
+                      )}
+                      <p>{filesUploaded.name}</p>
+                    </div>
+                    <CloseIcon
+                      onClick={() => hadleDleteFile(filesUploaded.name)}
+                    />
+                  </div>
+                );
+              })
+            : null}
         </div>
         <button className="gradient-button-next" onClick={() => handleChange()}>
           Next
