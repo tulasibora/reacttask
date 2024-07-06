@@ -168,7 +168,7 @@ export const FileQuestionsPage = ({ filename }) => {
                   }
                   onClick={() =>
                     hadleClickTogglepetionarRres({
-                      status: true,
+                      status: false,
                       name: "Bypetitionar",
                     })
                   }
@@ -183,7 +183,7 @@ export const FileQuestionsPage = ({ filename }) => {
                   }
                   onClick={() =>
                     hadleClickTogglepetionarRres({
-                      status: false,
+                      status: true,
                       name: "Byrespondant",
                     })
                   }
@@ -191,7 +191,7 @@ export const FileQuestionsPage = ({ filename }) => {
                   By respondant
                 </button>
               </div>
-              {isopenQue ? (
+              {!isopenQue ? (
                 dogBiteQA.map((question) => {
                   return (
                     <div className="queNans">
