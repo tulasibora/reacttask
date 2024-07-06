@@ -7,7 +7,12 @@ import InputFileUpload from "./FileUpload";
 import docx from "../assets/docx.png";
 import CloseIcon from "@mui/icons-material/Close";
 import save from "../assets/save.png";
+import { useNavigate } from "react-router-dom";
 export const FileuploadPage = () => {
+  const navigate = useNavigate();
+  const handleChange = () => {
+    navigate("/questions");
+  };
   return (
     <div className="fileUploadPage">
       <div className="fileuploadLeftPage">
@@ -99,7 +104,9 @@ export const FileuploadPage = () => {
             <CloseIcon />
           </div>
         </div>
-        <button className="gradient-button-next">Next</button>
+        <button className="gradient-button-next" onClick={() => handleChange()}>
+          Next
+        </button>
       </div>
     </div>
   );
